@@ -22,6 +22,7 @@ class Wikidata:
       FILTER(STRSTARTS(?wkt_string, "Point("))          # Check if ?coord starts with "Point("
     }
     GROUP BY ?airport
+    ORDER BY ?airport 
     """
 
     @staticmethod
