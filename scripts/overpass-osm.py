@@ -55,7 +55,7 @@ for aeroway in ["runway", "aerodrome"]:
             }
             update_tags = {}
             for tag in way.tags:
-                if tag in headers:
+                if tag in headers and tag not in row_data:
                     update_tags[tag] = way.tags[tag]
             # Add tags data
             row_data.update(update_tags)

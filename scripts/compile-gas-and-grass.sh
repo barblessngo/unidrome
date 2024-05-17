@@ -1,5 +1,6 @@
 #!/bin/bash -ex
 
+python scripts/overpass-osm.py
 python scripts/gas-grass.py
 mv final_gdf.geojson data/content-pack/barbless-maps/layers/Gas\ and\ Grass.geojson
 cd data/content-pack 

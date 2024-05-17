@@ -560,7 +560,7 @@ id,latitude,longitude,source_ref,alt_name,local_ref,wikipedia,icao,wikidata,addr
 40639145,50.7880263,8.3931055,,,,,EDFI,Q1225071,,,,,,,,,,,,,,,,,Segelflugplatz Hirzenhain,,,,,,,
 40735771,52.6196322,10.4100198,,,,,,Q120170579,,,,,,,,,,,,,,,,,Segelfluggelände Ummern,,,,,,,
 40766649,51.6475738,7.1638776,,,,de:Flugplatz Marl-Loemühle,EDLM,Q1433723,,,,,,,,,73,,,,,,,,Flugplatz Marl-Loemühle,,,,,,,Flugplatz Loemühle GmbH
-2216,37.0702772,-122.1276927,geonames.usgs.gov,,,en:Bonny Doon Village Airport,,Q19931158,,,CA,,,,Airport,,616,1653976,,,03/01/1994,,,,Bonny Doon Village Airport,wikipedia,,,,Santa Cruz,,Rich & Elvon Hoogner
+40833968,37.0702772,-122.1276927,geonames.usgs.gov,,,en:Bonny Doon Village Airport,,Q19931158,,,CA,,,,Airport,,616,1653976,,,03/01/1994,,,,Bonny Doon Village Airport,wikipedia,,,,Santa Cruz,,Rich & Elvon Hoogner
 40841881,44.8202115,-0.7068692,,,,fr:Base aérienne 106 Bordeaux-Mérignac,LFBD,Q2886451,,,,,,,,military,,,,,,airfield,,,Base aérienne 106 Bordeaux-Mérignac - Capitaine Michel Croci,,,,,,,
 40860646,57.5039496,10.229181,,,,da:Sindal Lufthavn,EKSN,Q3235149,,,,,,,,,,,,,,,,https://sindalairport.hjoerring.dk/,Sindal Lufthavn I/S,,,,+45 98935800,,,Hjørring Kommune
 40866453,57.0695072,8.7045601,,,,da:Thisted Lufthavn,EKTS,Q1433062,,,,Thisted Airport,,,,,,,,,,,,https://www.thisted.dk/Institutioner/institution/thistedlufthavn,Thisted Lufthavn,,,,,,,Thisted kommune
@@ -795,13 +795,13 @@ id,latitude,longitude,source_ref,alt_name,local_ref,wikipedia,icao,wikidata,addr
 44367237,37.073032,-120.387192,,,,,,,,,,,,,,,,,,,,,,,Chapman Airport (Private),Tiger2009,,,,,,
 44368114,38.3769041,-120.7951255,geonames.usgs.gov,,,,KJAQ,Q4160121,12380,,CA,,,,Airport,,515,1653559,,95642,03/01/1994,,Jackson,,Westover Field-Amador County Airport,Tiger2009,,,+1-208-223-2376,Amador,Airport Road,
 44388859,38.233834,-120.836281,,,,,,,,,,,,,,,,,,,,,,,,Tiger2009,,,,,,
-44388946,+32.7317875,-116.0282960,,,,,,,,,,,,,,,,,,,,,,,Miller's Airport,Tiger2009,,,,,,
+44388946,32.7317915,-116.0282555,,,,,,,,,,,,,,,,,,,,,,,Miller's Airport,Tiger2009,,,,,,
 44389511,39.6327135,-122.2168615,,,,,,,,,,,,,,,,,,,,,,,Varney Airport,Tiger2009,,,,,,
-44389580,+32.9916372,-115.5157954,geonames.usgs.gov,,,en:Brawley Municipal Airport,KBWC,Q3813588,,,CA,Brawley Municipal Airport,public,,Airport,,39,1653280,,,03/01/1994,,,,Brawley Municipal Airport,wikipedia;Tiger2009,,,,Imperial,,City of Brawley
-44389591,+32.6675924,-115.5131225,geonames.usgs.gov,,,en:Calexico International Airport,KCXL,Q3813536,,,CA,Calexico International Airport,public,,Airport,,2,1653300,,,03/01/1994,,,,Calexico International Airport,,,,,Imperial,,City of Calexico
+44389580,32.9913869,-115.5172629,geonames.usgs.gov,,,en:Brawley Municipal Airport,KBWC,Q3813588,,,CA,Brawley Municipal Airport,public,,Airport,,39,1653280,,,03/01/1994,,,,Brawley Municipal Airport,wikipedia;Tiger2009,,,,Imperial,,City of Brawley
+44389591,32.6680395,-115.5174261,geonames.usgs.gov,,,en:Calexico International Airport,KCXL,Q3813536,,,CA,Calexico International Airport,public,,Airport,,2,1653300,,,03/01/1994,,,,Calexico International Airport,,,,,Imperial,,City of Calexico
 44389728,35.8126316,-117.3276565,,,,,,Q6588299,15555,,CA,,,L72,Airport,,512,1654064,,93592,03/01/1994,,Trona,,Trona Airport,bing_imagery_0.25m_201107;ICA;TIGER09;GNIS;FAA,,,+1 760 372 4531,Inyo,Trona Airport Road,US Dept Of Interior - BLM
 44389768,36.5882121,-118.0514884,geonames.usgs.gov;naco.faa.gov,,,en:Lone Pine Airport,,Q6671351,,,CA,Lone Pine Airport,public,O26,Airport,,1122,1653628,,,03/01/1994,,Lone Pine,,Lone Pine Airport,wikipedia,,,,Inyo,,
-44389870,+36.3010741,-116.4172790,geonames.usgs.gov,,,,,Q61664602,,,CA,,,,Airport,,632,1653388,,,03/01/1994,,,,Amargosa Airport,Tiger2009;wikipedia,,,,Inyo,,Amargosa Opera House Inc.
+44389870,36.3009494,-116.4174816,geonames.usgs.gov,,,,,Q61664602,,,CA,,,,Airport,,632,1653388,,,03/01/1994,,,,Amargosa Airport,Tiger2009;wikipedia,,,,Inyo,,Amargosa Opera House Inc.
 44389916,36.8155391,-118.2050167,geonames.usgs.gov,,,en:Independence Airport,,Q3016378,,,CA,Independence Airport,public,,Airport,,1190,1653544,,,03/01/1994,,,,Independence Airport,wikipedia;Tiger2009,,,,Inyo,,
 44390171,39.489289,-121.6208465,,,,en:Oroville Municipal Airport,KOVE,Q7103903,,,CA,Oroville Municipal Airport,public,,,,56,,,,,,,,Oroville Municipal Airport,wikipedia,,,,,,City of Oroville
 44402426,35.6197528,-119.3535817,geonames.usgs.gov,,,en:Wasco Airport,,Q10853578,,,CA,Wasco-Kern County Airport,public,,Airport,,95,1654103,,,03/01/1994,,,,Wasco-Kern County Airport,Tiger2009;wikipedia,,,,Kern,,"Kern County, California"
@@ -831,7 +831,7 @@ id,latitude,longitude,source_ref,alt_name,local_ref,wikipedia,icao,wikidata,addr
 44486176,33.7342239,-117.0223385,geonames.usgs.gov,,,en:Hemet-Ryan Airport,KHMT,Q3888248,,,CA,Hemet-Ryan Airport,public,,Airport,,460,1653519,,,03/01/1994,,,,Hemet-Ryan Airport,wikipedia,,,,Riverside,,County of Riverside
 44486232,33.8964312,-117.6027716,AM909_DSCW9571,,,en:Corona Municipal Airport,KAJO,Q1656040,1900,,CA,,,,Airport,,162,1653370,,92880,03/01/1994,,Corona,,Corona Municipal Airport,TIGER09;bing_imagery_0.06m_200706;survey;image;FCC,,,+1 951 736 2289,Riverside,Aviation Drive,US Army CoE
 44486246,33.9897724,-117.4103447,geonames.usgs.gov,,,,KRIR,Q5456581,,,CA,,,,Airport,,231,1653891,,,03/01/1994,,,,Flabob Airport,Tiger2009,,,,Riverside,,
-44486313,+33.8515718,-114.7979827,,,,,,,,,,,,,,,,,,,,,,,Midland Airport,Tiger2009,,,,,,
+44486313,33.8511154,-114.7980783,,,,,,,,,,,,,,,,,,,,,,,Midland Airport,Tiger2009,,,,,,
 44486328,33.6206053,-114.7192017,,,,en:Blythe Airport,KBLH,Q597826,,,,,,,,,,,,,,,,,Blythe Airport,,,,,,,
 44486540,33.6306359,-117.3020709,geonames.usgs.gov,,,,,Q74833210,,,CA,,,,Airport,,384,277083,,,10/01/1992,,,,Skylark Field Airport,Bing,,,+1 714 834 9200,Riverside,,
 44487057,40.780862,-124.2104379,,,,en:Samoa Field Airport,,Q4534895,,,CA,,,,,,3,,,,,,,,Samoa Field Airport,Tiger2009,,,,,,
@@ -841,7 +841,7 @@ id,latitude,longitude,source_ref,alt_name,local_ref,wikipedia,icao,wikidata,addr
 44501001,33.4590235,-117.31195,,,,,,,,,,,,,,,,,,,,,,,Private Landing Strip,Tiger2009,,,,,,
 44501276,33.0398795,-116.9178775,geonames.usgs.gov,,,,KRNM,Q7289905,2926,,CA,,,,Airport,,424,1652979,,,12/01/1991,,Ramona,,Ramona Airport,Tiger2009,,,,San Diego,Montecito Road,
 44501655,33.2841394,-116.6712699,geonames.usgs.gov,,,,,,31930,,CA,,,,,,875,1654102,private,92086,,,Warner Springs,,Warner Springs Gliderport,Tiger2009,,,,,Highway 79,"Warner Springs Ranch Resort, LLC"
-44501734,+32.9557677,-116.2945386,geonames.usgs.gov,Agua Caliente Airstrip,,en:Agua Caliente Airport,,Q4057153,,,CA,,,,Airport,,377,1653202,,,03/01/1994,,,,Agua Caliente Airport,Tiger2009,,,,San Diego,,
+44501734,32.9555532,-116.2943716,geonames.usgs.gov,Agua Caliente Airstrip,,en:Agua Caliente Airport,,Q4057153,,,CA,,,,Airport,,377,1653202,,,03/01/1994,,,,Agua Caliente Airport,Tiger2009,,,,San Diego,,
 44580782,34.9000526,-120.4560728,geonames.usgs.gov,,,es:Aeropuerto Público de Santa María,KSMX,Q7419700,,,CA,,,SMX,Airport,,68,1653981,,,03/01/1994,,,,Santa Maria Public Airport,Tiger2009,,,,Santa Barbara,,
 44580825,34.6659124,-120.4670869,geonames.usgs.gov,,,en:Lompoc Airport,KLPC,Q6669547,,,CA,Lompoc Airport,public,Lompoc City Hall,Airport,,26,1653627,,,03/01/1994,,,https://www.cityoflompoc.com/transit/airport/,Lompoc Airport,Tiger2009;wikipedia,,,(805) 875-8268,Santa Barbara,,City of Lompoc
 44581107,40.5113493,-122.2921374,,,,en:Redding Municipal Airport,KRDD,Q7305623,,,CA,Redding Municipal Airport,public,,,commercial,152,1653868,,,,,,,Redding Municipal Airport,,,,,,,City of Redding
@@ -3882,7 +3882,7 @@ id,latitude,longitude,source_ref,alt_name,local_ref,wikipedia,icao,wikidata,addr
 174725121,43.0549253,42.7500403,,,,ka:მესტიის აეროპორტი,UGMS,Q2875860,,Aéroport Reine Tamar de Mestia,,Mestia Queen Tamar Airport,,,,,,,,,,,,,მესტიის თამარ მეფის აეროპორტი,,,Местийский аэропорт им. Царицы Тамары,,,,
 174768931,-22.2256831,-47.3812457,,,,,SDLL,,,,,,,,,,,,government,,,,Leme,,Aeródromo Municipal Yolanda Penteado,,,,,,Estrada Municipal LME-475,Prefeitura do Município de Leme
 174775672,41.6677564,-1.0487628,,Base Aérea de Zaragoza,,es:Aeropuerto de Zaragoza,LEZG,Q704823,,,,Zaragoza Airport,,,,,,,,,,,,https://www.aena.es/es/zaragoza.html,Aeropuerto de Zaragoza,ourairports.com + local knowledge,,,,,,
-258,-51.9350917,-60.0630235,,,,,,Q16488204,,,,,,,,,,,,,,,,,Fox Bay Airstrip,farmboundariesewfalklands,airstrip,,,,,
+174855648,-51.9350917,-60.0630235,,,,,,Q16488204,,,,,,,,,,,,,,,,,Fox Bay Airstrip,farmboundariesewfalklands,airstrip,,,,,
 174874466,50.2883669,11.8541128,,,,,EDQM,Q565394,,,,,,,,,,,,,,,,,Verkehrslandeplatz Hof-Plauen,,,,,,,
 174900471,-21.4438589,-47.3705209,,,,,SDFH,Q12692643,,,,,,,,,,,,,,,,,Fazenda Amália,ourairports.com;ROTAER,,,,,,
 174930205,16.1374895,-22.8886671,,,,pt:Aeroporto Internacional Aristides Pereira,GVBA,Q1430965,,,,Aristides Pereira International Airport,,,,,,,,,,,,https://www.asa.cv/aeroportos/aeroporto-da-boavista,Aeroporto Internacional Aristides Pereira,,,,,,,Aeroportos e Seguranca Aerea (ASA)
@@ -9700,7 +9700,7 @@ id,latitude,longitude,source_ref,alt_name,local_ref,wikipedia,icao,wikidata,addr
 438967259,40.8454866,-72.6283471,,,,en:Francis S. Gabreski Airport,KFOK,Q5482369,,,NY,Francis S. Gabreski Airport,,,,,19,978365,,,,,,,Francis S. Gabreski Airport,wikipedia,,,,,,"Suffolk County, New York"
 438999589,-51.2611388,-60.5925858,,,,,,,,,,,,,,,,,,,,,,,Carcass Island Landing Strip,ourairports.com,,,,,,
 439008574,-51.4572961,-58.6173022,,,,,,,,,,,,,,,,,,,,,,,Douglas Station Airstrip,,,,,,,
-300230,51.0090067,-72.9837562,,,,,CRT2,,,,,,small_airport,,,,393,,,,,,,,Aéroport Rivière Temiscamie,ouairport.com,,,,,,Air Roberval Ltee
+439065157,51.0090067,-72.9837562,,,,,CRT2,,,,,,small_airport,,,,393,,,,,,,,Aéroport Rivière Temiscamie,ouairport.com,,,,,,Air Roberval Ltee
 439086151,51.9051599,-72.1231685,,,,,CRS7,,,,,,,,,,795,,,,,,,,Aéroport de Matoush,,,,,,,
 439119862,40.8217622,-72.8667775,,,,en:Brookhaven Airport,KHWV,Q3888181,,,NY,Brookhaven Airport,public,,,,22,978299,,,,,,,Brookhaven Airport,wikipedia,,,,,,
 439126470,53.7373033,87.2024224,,,,,ZE1R,,,,,,,ZE1R,,,200,,,,,,,,Абагур-Лесной,,,,,,,
@@ -11267,7 +11267,7 @@ id,latitude,longitude,source_ref,alt_name,local_ref,wikipedia,icao,wikidata,addr
 517595968,40.2866738,21.8419409,,,,"en:Kozani National Airport ""Filippos""",LGKZ,Q3499509,,"Aéroport National de Kozani ""Filippos""",,"National Kozani Airport ""Filippos""",public,KZI,,military,630,,,,,,,,Κρατικός Αερολιμένας Κοζάνης «Φίλιππος»,wikipedia,,,,,,Hellenic Civil Aviation Authority
 517679121,-38.9039229,-64.0839708,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 517803333,1.8081972,31.3435378,,,,,,,,,,,,,,,625 m,,,,,,,,Butiaba Airstrip,,,,,,,
-517832645,+35.5824444,-79.1013333,,,,en:Raleigh Executive Jetport,KTTA,Q7286914,,,,,public,,,,246.1 ft. / 75.0 m,,public,,,,,,Raleigh Executive Jetport at Sanford-Lee County,http://raleighexec.com/,,,,,,Sanford-Lee County Regional Airport Authority
+517832645,35.5809905,-79.1029665,,,,en:Raleigh Executive Jetport,KTTA,Q7286914,,,,,public,,,,246.1 ft. / 75.0 m,,public,,,,,,Raleigh Executive Jetport at Sanford-Lee County,http://raleighexec.com/,,,,,,Sanford-Lee County Regional Airport Authority
 518112717,37.6708443,-8.1237825,,,LP58,,,,,,,,,,,,223,,,,,,,,Aeródromo da Zambujeira,,,,,,,
 518213906,-40.3401749,-73.3204751,,,,es:Aeródromo Quilpe,SCSQ,Q16899718,,,,,,,,,48,,,,,,,,Aeródromo Quilpe,,,,,,,
 518337197,-5.1230726,-37.9710242,,,,,,,,,,,,,,,,,,,,,,,Aeroporto da Chapada do Apodi,,,,,,,
@@ -13932,7 +13932,7 @@ id,latitude,longitude,source_ref,alt_name,local_ref,wikipedia,icao,wikidata,addr
 699155115,52.673435,14.8692601,,,,,,,,,,Witnica Airstrip,,,,grass,,,,,,,,,Lądowisko Witnica,https://lotniska.dlapilota.pl/witnica,,,,,,
 699225132,52.7356256,-0.8945615,,,,,,,,,,,,,,military,,,,,,airfield,,,Former RAF Station Melton Mowbray,,,,,,,
 699331927,-7.1950992,111.5454081,,,,id:Bandar Udara Ngloram,WARC,Q7022413,,,,Ngloram Airport,,,,,,,,,,,,,Bandar Udara Ngloram,ourairports.com,,,,,,
-699503897,+32.6154594,-116.1644729,geonames.usgs.gov,,,,,Q2902506,,,CA,,,,Airport,,857,1653561,,,03/01/1994,,,,Jacumba Airport,Tiger2009,,,,San Diego,,
+699503897,32.6155185,-116.1652948,geonames.usgs.gov,,,,,Q2902506,,,CA,,,,Airport,,857,1653561,,,03/01/1994,,,,Jacumba Airport,Tiger2009,,,,San Diego,,
 699742520,24.7256519,-77.9877537,,,,en:Andros Central Airport,,Q14932557,,,,,,,,,,,,,,,,,Andros Central Airport,,,,,,,
 699831539,49.1282106,14.1732377,,,,,,,,,,,,,,,,,,,,,,,Vodňany Airstrip,,,,,,,
 699851241,-34.199101,140.6728232,,,,,YREN,Q15106,,,,,,,,,,,,,,,,,Renmark Airport,,,,,,,Renmark Paringa Council
@@ -18063,7 +18063,7 @@ Two grass lading areas, 305x305m.",,,,,
 1052453544,39.1020131,-96.4173122,,,,,,Q35303834,3999,,,,,,,,,,,66502,,,Manhattan,,Smith Airport,ourairports.com,,,,,Smith Hills Lane,
 1052460931,40.8217612,-74.8542288,,,,,N05,Q3913362,115,,NJ,,,,Airport,,200,884770,,07840,08/01/1994,,Hackettstown,,Hackettstown Airport,,,,,Warren,Airport Road,
 1052507919,-27.2164258,-61.2101304,,,,en:Charata Airport,,Q65062929,,,,Charata Aerodrome,,,,,,,,,,,,,Aeródromo de Charata,ourairports.com,,,,,,
-1052513249,-27.6315,-59.1799,,,,en:Resistencia Aeroclub,SARR,Q16899222,,,,,,,,,,,,,,,,http://aeroclubchaco.com.ar/,Aeroclub Chaco,ourairports.com,,,+54 362 4425370,,Ruta Nacional 11,
+1052513249,-27.6322746,-59.1802835,,,,en:Resistencia Aeroclub,SARR,Q16899222,,,,,,,,,,,,,,,,http://aeroclubchaco.com.ar/,Aeroclub Chaco,ourairports.com,,,+54 362 4425370,,Ruta Nacional 11,
 1052534725,35.6410517,-106.1436288,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Royal City Radio Control Club
 1052816650,47.4392468,7.489813,,,,,LSPD,,,,,,,,,,,,private,4123,,,Dittingen,https://sg-dittingen.ch,Flugplatz Dittingen,,,,+41 61 761 68 06,,Auf dem Felde,SG Dittingen
 1053098714,-14.7258005,15.0128026,,,,,FN18,,,Aéroport de Matala,,Matala Airport,,,,,,,,,,,,,Aeródromo da Matala,ourairports.com,,Аэропорт Матала,,,,

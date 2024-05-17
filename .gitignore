@@ -1,3 +1,5 @@
 .venv
 *.pickle
 .DS_Store
+*.geojson
+*.zip
