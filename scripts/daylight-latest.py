@@ -114,8 +114,8 @@ class AthenaQueryRunner:
         query = f"""
                 SELECT
                 id,
-                ST_X(ST_CENTROID(ST_GEOMETRYFROMTEXT(wkt))) AS lon,
-                ST_Y(ST_CENTROID(ST_GEOMETRYFROMTEXT(wkt))) AS lat,
+                ST_Y(ST_CENTROID(ST_GEOMETRYFROMTEXT(wkt))) AS latitude,
+                ST_X(ST_CENTROID(ST_GEOMETRYFROMTEXT(wkt))) AS longitude,
                 {all}
                 FROM unidrome_daylight
                 WHERE tags['aeroway'] = '{aeroway_type}'
@@ -123,38 +123,9 @@ class AthenaQueryRunner:
                 """
         return query
 
-    def get_top_tags(self, aeroway_type, n):
-        query = f"""
-            SELECT
-                variable,
-                COUNT(*) AS variable_count
-            FROM (
-                SELECT id, t.*
-                FROM (
-                    SELECT
-                        id,
-                        tags AS m
-                    FROM unidrome_daylight
-                    WHERE tags['aeroway'] = '{aeroway_type}'
-                    AND release = '{release_version}'
-                ) t1
-                CROSS JOIN UNNEST(
-                    coalesce(map_keys(m), array [ null ]),
-                    coalesce(map_values(m), array [ null ])
-                ) AS t (variable, value)
-            )
-            GROUP BY variable
-            ORDER BY variable_count DESC
-            LIMIT {n};
-        """
-        query_execution_id = self.run_query(query)
-        self.wait_for_query_to_complete(query_execution_id)
-        results = self.get_query_results(query_execution_id)
-        top_tags = set([])
-        for tag, count in results:
-            top_tags.add(tag)
-
-        return top_tags
+    def get_top_tags(self, aeroway_type):
+        with open(f"data/world/osm/top-{aeroway_type}.txt", "r") as file:
+            return [line.strip() for line in file.readlines()]
 
 class S3Fetcher:
     @staticmethod
@@ -179,12 +150,12 @@ if __name__ == "__main__":
     release_version = S3Fetcher.get_latest_release(BUCKET, KEY)
     
     for tag in ["runway", "aerodrome"]:
-        top_tags = runner.get_top_tags(tag, 50)
+        top_tags = runner.get_top_tags(tag)
         query = runner.build_top_query(top_tags, tag, release_version)
         print(query)
         query_execution_id = runner.run_query(query)
         runner.wait_for_query_to_complete(query_execution_id)
-        out = os.path.join('data', 'world', 'daylight-osm', f'{tag}.csv')
+        out = os.path.join('data', 'world', 'osm', 'daylight', f'{tag}.csv')
         s3 = boto3.client('s3')
         s3.download_file(S3_OUTPUT, f"{query_execution_id}.csv", out)
         print("Results saved to", out)

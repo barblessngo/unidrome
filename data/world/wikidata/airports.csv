@@ -1,4 +1,4 @@
-airport,minName,minEle,minRunway,minICAO,minIATA,minWebsite,minOSM,LAT,LON
+airport,minName,minEle,minRunway,minICAO,minIATA,minWebsite,minOSM,lat,lon
 http://www.wikidata.org/entity/Q17559,Lord Howe Island Airport,3,,YLHI,LDH,,,159.077222222,-31.538333333
 http://www.wikidata.org/entity/Q1547,Lyon–Saint-Exupéry Airport,250,17L/35R,LFLL,LYS,https://www.lyonaeroports.com/,,5.081111111,45.725555555
 http://www.wikidata.org/entity/Q4102,Lyon-Bron Airport,659,,LFLY,LYN,https://businessaviation.lyonaeroports.com/,,4.938888,45.729445

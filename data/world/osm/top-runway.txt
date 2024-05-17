@@ -1,0 +1,11 @@
+area
+ele
+access
+abandoned
+surface
+width
+name
+ref:linz:topo50_id
+length
+source
+ref
