@@ -4,14 +4,13 @@ import pandas as pd
 import h3pandas
 
 gdfs = get_all_gdfs()
-prefixes = [ f"{k.replace('/', '_').replace('.', '_')}_" for k in lon_lat_lookup ]
+prefixes = [ f"{k.replace('data/', '').replace('.csv', '').replace('/', '_').replace('.', '_')}_" for k in lon_lat_lookup ]
 gdfs = [gdfs[file] for file in gdfs]
 prefixed_gdfs = []
 for gdf, prefix in zip(gdfs, prefixes):
     prefixed_gdf = gdf.rename(columns=lambda x: f"{prefix}{x}" if x != 'geometry' else x)
     prefixed_gdfs.append(prefixed_gdf)
 gdfs = prefixed_gdfs
-print(gdfs)
 
 for gdf in gdfs:
     gdf.set_crs(epsg=4326, inplace=True)
@@ -38,9 +37,9 @@ combined_gdf = combined_gdf.drop(columns=geometry_cols)
 # Convert the combined DataFrame back to a GeoDataFrame
 combined_gdf = gpd.GeoDataFrame(combined_gdf, geometry='geometry')
 
-df = combined_gdf.h3.geo_to_h3_aggregate(7)
+df = combined_gdf.h3.geo_to_h3(7)
 h3_combined = gpd.GeoDataFrame(df, geometry='geometry')
 
-print(h3_combined)
 # Save the combined GeoDataFrame to a file
 h3_combined.to_file("package.gpkg", layer='unidrome', driver="GPKG")
+h3_combined.to_csv("data/combined.csv")
