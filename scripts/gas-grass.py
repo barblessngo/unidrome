@@ -3,6 +3,7 @@ import overpy
 import geopandas as gpd
 from shapely.geometry import Point
 import os
+from content_pack import gdf_to_kmz_with_bundled_icons
 
 
 # Define the list of surfaces for Overpass query
@@ -51,4 +52,6 @@ final_gdf = final_gdf[["ARPT_ID", "ARPT_NAME", "geometry"]]
 final_gdf = final_gdf.dissolve(by=["ARPT_ID", "ARPT_NAME"])
 #final_gdf = final_gdf.reset_index()
 #final_gdf["Name"] = final_gdf.apply(lambda row: f"{row['ARPT_NAME']} ({row['ARPT_ID']})", axis=1)
-final_gdf.to_file('final_gdf.geojson', driver='GeoJSON')
+#final_gdf["icon_path"] = "icons/ABW-icon.png"
+final_gdf.to_file('data/content-pack/barbless-maps/layers/Gas and Grass.geojson', driver='GeoJSON')
+#gdf_to_kmz_with_bundled_icons(final_gdf, "data/content-pack/barbless-maps/layers/Gas and Grass.kmz")

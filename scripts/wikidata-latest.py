@@ -47,7 +47,7 @@ class Wikidata:
     def save_csv(data, filename):
         if data:
             fields = data['head']['vars']
-            fields.extend(['LAT', 'LON'])  # Add latitude and longitude fields
+            fields.extend(['LON', 'LAT'])  # Add latitude and longitude fields
             fields.remove('minCoord')  # Remove the original coordinate field
 
             rows = []

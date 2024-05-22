@@ -4,3 +4,6 @@
 *.geojson
 *.zip
 *.swp
+.env
+*.kmz
+__pycache__
