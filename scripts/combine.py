@@ -37,9 +37,10 @@ combined_gdf = combined_gdf.drop(columns=geometry_cols)
 # Convert the combined DataFrame back to a GeoDataFrame
 combined_gdf = gpd.GeoDataFrame(combined_gdf, geometry='geometry')
 
+#df = combined_gdf.h3.geo_to_h3_aggregate(7)
 df = combined_gdf.h3.geo_to_h3(7)
 h3_combined = gpd.GeoDataFrame(df, geometry='geometry')
 
 # Save the combined GeoDataFrame to a file
-h3_combined.to_file("package.gpkg", layer='unidrome', driver="GPKG")
+#h3_combined.to_file("package.gpkg", layer='unidrome', driver="GPKG")
 h3_combined.to_csv("data/combined.csv")

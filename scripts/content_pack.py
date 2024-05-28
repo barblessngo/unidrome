@@ -3,6 +3,16 @@ import os
 import simplekml
 import zipfile
 
+def series_to_html_table(series, columns=None):
+    if columns is not None:
+        series = series[columns]
+    html = '<table style="border-collapse: collapse; width: 100%;">'
+    for i, (index, value) in enumerate(series.items()):
+        color = '#f2f2f2' if i % 2 == 0 else '#ffffff'
+        html += f'<tr style="background-color: {color};"><td style="border: 1px solid #dddddd; padding: 8px;">{index}</td><td style="border: 1px solid #dddddd; padding: 8px;">{value}</td></tr>'
+    html += '</table>'
+    return html
+
 # local path of icons should be passed at gfd["icon_path"]
 def gdf_to_kmz_with_bundled_icons(gdf, file_path):
     kml = simplekml.Kml()

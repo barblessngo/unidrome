@@ -7,7 +7,7 @@ lon_lat_lookup = {
     #'data/world/ourairports/runways.csv': lambda row: Point(float(row.iloc[10]), float(row.iloc[9])) if row.iloc[9] and row.iloc[10] else None,
     'data/world/ourairports/airports.csv': lambda row: Point(float(row.iloc[5]), float(row.iloc[4])),
     #'data/world/osm/daylight/runway.csv': lambda row: Point(float(row.iloc[2]), float(row.iloc[1])),
-    #'data/world/osm/daylight/aerodrome.csv': lambda row: Point(float(row.iloc[2]), float(row.iloc[1])),
+    'data/world/osm/daylight/aerodrome.csv': lambda row: Point(float(row.iloc[2]), float(row.iloc[1])),
     'data/world/wikidata/airports.csv': lambda row: Point(float(row.iloc[8]), float(row.iloc[9])),
 }
 
