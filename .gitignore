@@ -6,4 +6,5 @@
 *.swp
 .env
 *.kmz
+*.gpkg
 __pycache__
