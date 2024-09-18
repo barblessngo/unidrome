@@ -81,7 +81,7 @@ columns_to_keep = ourairports_df.columns.tolist() + ['geometry', 'osm_editor_lin
 missing_airports_gdf = missing_airports_gdf[columns_to_keep]
 
 # Export to GeoPackage
-missing_airports_gdf.to_file('missing_airports.gpkg', layer='missing_airports', driver='GPKG')
+#missing_airports_gdf.to_file('missing_airports.gpkg', layer='missing_airports', driver='GPKG')
+missing_airports_gdf.to_csv('data/world/osm/daylight/missing_from_ourairports.csv')
 
-print("Exported missing airports to 'missing_airports.gpkg' with 'osm_editor_link' attribute.")
 
