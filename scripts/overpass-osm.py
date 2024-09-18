@@ -10,7 +10,7 @@ args = parser.parse_args()
 use_cache = args.use_cache
 
 # Define the Overpass API
-api = overpy.Overpass(url='https://overpass.kumi.systems/api/interpreter')
+api = overpy.Overpass(url='https://overpass.private.coffee/api/interpreter')
 
 for aeroway in ["runway", "aerodrome"]: 
     # Check if pickle file exists
@@ -25,8 +25,11 @@ for aeroway in ["runway", "aerodrome"]:
 
         # Define the Overpass query to get runways with specified surfaces within the United States
         query = f"""
-        way["aeroway"="{aeroway}"];
-        out center;
+            node["aeroway"="{aeroway}"];
+            out;
+
+            way["aeroway"="{aeroway}"];
+            out center;
         """
 
         # Execute the query
