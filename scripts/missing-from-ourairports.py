@@ -1,4 +1,4 @@
-# Updated Python Script to Find Airports from OurAirports Not in Daylight Aerodrome Dataset
+# Updated Python Script to Find Airports from OurAirports Not in overpass Aerodrome Dataset
 # Excluding airports where type == 'closed' or type == 'heliport'
 # Added 'osm_editor_link' attribute for each missing airport
 
@@ -18,9 +18,9 @@ ourairports_df = ourairports_df[~ourairports_df['type'].isin(exclude_types)]
 # Drop rows with missing latitude or longitude
 ourairports_df = ourairports_df.dropna(subset=['latitude_deg', 'longitude_deg'])
 
-# Step 2: Load the Daylight Aerodrome Data
+# Step 2: Load the overpass Aerodrome Data
 # ----------------------------------------
-# Load Daylight aerodrome data
+# Load overpass aerodrome data
 overpass_df = pd.read_csv('data/world/osm/overpass/aerodrome.csv', low_memory=False)
 
 # Drop rows with missing latitude or longitude
@@ -32,7 +32,7 @@ overpass_df = overpass_df.dropna(subset=['latitude', 'longitude'])
 ourairports_geometry = [Point(xy) for xy in zip(ourairports_df['longitude_deg'], ourairports_df['latitude_deg'])]
 ourairports_gdf = gpd.GeoDataFrame(ourairports_df, geometry=ourairports_geometry, crs='EPSG:4326')
 
-# Create geometries for Daylight
+# Create geometries for overpass
 overpass_geometry = [Point(xy) for xy in zip(overpass_df['longitude'], overpass_df['latitude'])]
 overpass_gdf = gpd.GeoDataFrame(overpass_df, geometry=overpass_geometry, crs='EPSG:4326')
 
@@ -48,7 +48,7 @@ ourairports_gdf['geometry_buffer'] = ourairports_gdf.geometry.buffer(1000)  # Bu
 # Use the buffered geometry for spatial join
 ourairports_gdf_buffered = ourairports_gdf.set_geometry('geometry_buffer')
 
-# Prepare the Daylight GeoDataFrame for spatial join
+# Prepare the overpass GeoDataFrame for spatial join
 overpass_gdf_sjoin = overpass_gdf[['geometry']].copy()
 
 # Perform spatial join to find matching airports
@@ -59,7 +59,7 @@ joined_gdf = gpd.sjoin(
     predicate='intersects'  # Updated parameter name
 )
 
-# Identify airports not in Daylight (NaN in 'index_right' indicates no match)
+# Identify airports not in overpass (NaN in 'index_right' indicates no match)
 missing_airports_gdf = joined_gdf[joined_gdf['index_right'].isna()]
 
 # Step 5: Clean Up and Add OSM Editor Link
