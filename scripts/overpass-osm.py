@@ -28,6 +28,7 @@ for aeroway in ["runway", "aerodrome"]:
         (
           nw["aeroway"="{aeroway}"];
           nw["disused:aeroway"="{aeroway}"];
+          nw["abandoned:aeroway"="{aeroway}"];
         );
         out center;
         """
