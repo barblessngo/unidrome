@@ -22,7 +22,7 @@ def main(exclude_unable_to_see):
     ourairports_df = pd.read_csv('data/world/ourairports/airports.csv')
 
     # Exclude airports where type == 'closed' or type == 'heliport'
-    exclude_types = ['closed', 'heliport']
+    exclude_types = ['closed', 'heliport', 'seaplane_base']
     ourairports_df = ourairports_df[~ourairports_df['type'].isin(exclude_types)]
 
     # Drop rows with missing latitude or longitude
