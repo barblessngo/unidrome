@@ -1,5 +1,6 @@
 # Updated Python Script to Find Airports from OurAirports Not in overpass Aerodrome or Runway Dataset
 # Excluding airports where type == 'closed' or type == 'heliport'
+# Excluding airports that cannot be seen from imagery
 # Added 'osm_editor_link' attribute for each missing airport
 
 import pandas as pd
@@ -17,6 +18,19 @@ ourairports_df = ourairports_df[~ourairports_df['type'].isin(exclude_types)]
 
 # Drop rows with missing latitude or longitude
 ourairports_df = ourairports_df.dropna(subset=['latitude_deg', 'longitude_deg'])
+
+# Step 1.5: Exclude Airports Unable to Be Seen in Imagery
+# -------------------------------------------------------
+# Load the list of airports that cannot be seen from imagery
+unable_to_see_csv = 'data/world/ourairports/unable-to-be-seen-in-osm-imagery.csv'
+unable_to_see_df = pd.read_csv(unable_to_see_csv)
+
+# Ensure the 'id' column exists in both DataFrames
+if 'id' not in ourairports_df.columns or 'id' not in unable_to_see_df.columns:
+    raise ValueError("Both OurAirports data and unable-to-be-seen CSV must contain an 'id' column.")
+
+# Exclude airports in unable_to_see_df from ourairports_df
+ourairports_df = ourairports_df[~ourairports_df['id'].isin(unable_to_see_df['id'])]
 
 # Step 2: Load the overpass Aerodrome Data
 # ----------------------------------------
