@@ -25,11 +25,11 @@ for aeroway in ["runway", "aerodrome"]:
 
         # Define the Overpass query to get runways with specified surfaces within the United States
         query = f"""
-            node["aeroway"="{aeroway}"];
-            out;
-
-            way["aeroway"="{aeroway}"];
-            out center;
+        (
+          nw["aeroway"="{aeroway}"];
+          nw["disused:aeroway"="{aeroway}"];
+        );
+        out center;
         """
 
         # Execute the query
@@ -49,6 +49,22 @@ for aeroway in ["runway", "aerodrome"]:
         writer = csv.DictWriter(csv_file, fieldnames=headers)
         writer.writeheader()
 
+        for node in result.nodes:
+            # Prepare the row data
+            row_data = {
+                'id': node.id,
+                'latitude': float(node.lat),
+                'longitude': float(node.lon)
+            }
+            update_tags = {}
+            for tag in node.tags:
+                if tag in headers and tag not in row_data:
+                    update_tags[tag] = node.tags[tag]
+            # Add tags data
+            row_data.update(update_tags)
+            # Write the row to CSV
+            writer.writerow(row_data)
+
         for way in result.ways:
             # Prepare the row data
             row_data = {
@@ -64,3 +80,4 @@ for aeroway in ["runway", "aerodrome"]:
             row_data.update(update_tags)
             # Write the row to CSV
             writer.writerow(row_data)
+
