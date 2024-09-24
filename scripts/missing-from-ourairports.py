@@ -1,4 +1,4 @@
-# Updated Python Script to Find Airports from OurAirports Not in overpass Aerodrome Dataset
+# Updated Python Script to Find Airports from OurAirports Not in overpass Aerodrome or Runway Dataset
 # Excluding airports where type == 'closed' or type == 'heliport'
 # Added 'osm_editor_link' attribute for each missing airport
 
@@ -26,21 +26,37 @@ overpass_df = pd.read_csv('data/world/osm/overpass/aerodrome.csv', low_memory=Fa
 # Drop rows with missing latitude or longitude
 overpass_df = overpass_df.dropna(subset=['latitude', 'longitude'])
 
+# Step 2.5: Load and Process the Runway Data
+# ------------------------------------------
+# Load runway data
+runway_df = pd.read_csv('data/world/osm/overpass/runway.csv', low_memory=False)
+
+# Drop rows with missing latitude or longitude
+runway_df = runway_df.dropna(subset=['latitude', 'longitude'])
+
 # Step 3: Convert DataFrames to GeoDataFrames
 # -------------------------------------------
 # Create geometries for OurAirports
 ourairports_geometry = [Point(xy) for xy in zip(ourairports_df['longitude_deg'], ourairports_df['latitude_deg'])]
 ourairports_gdf = gpd.GeoDataFrame(ourairports_df, geometry=ourairports_geometry, crs='EPSG:4326')
 
-# Create geometries for overpass
+# Create geometries for overpass aerodrome
 overpass_geometry = [Point(xy) for xy in zip(overpass_df['longitude'], overpass_df['latitude'])]
 overpass_gdf = gpd.GeoDataFrame(overpass_df, geometry=overpass_geometry, crs='EPSG:4326')
 
+# Create geometries for runway
+runway_geometry = [Point(xy) for xy in zip(runway_df['longitude'], runway_df['latitude'])]
+runway_gdf = gpd.GeoDataFrame(runway_df, geometry=runway_geometry, crs='EPSG:4326')
+
 # Step 4: Perform Spatial Join
 # ----------------------------
-# Project to a metric CRS (EPSG:3857) for accurate distance measurements
+# Project all GeoDataFrames to a metric CRS (EPSG:3857) for accurate distance measurements
 ourairports_gdf = ourairports_gdf.to_crs('EPSG:3857')
 overpass_gdf = overpass_gdf.to_crs('EPSG:3857')
+runway_gdf = runway_gdf.to_crs('EPSG:3857')
+
+# Combine overpass aerodrome and runway GeoDataFrames
+combined_gdf = pd.concat([overpass_gdf, runway_gdf], ignore_index=True)
 
 # Create a buffer around OurAirports points (e.g., 1000 meters)
 ourairports_gdf['geometry_buffer'] = ourairports_gdf.geometry.buffer(1000)  # Buffer of 1000 meters
@@ -48,18 +64,18 @@ ourairports_gdf['geometry_buffer'] = ourairports_gdf.geometry.buffer(1000)  # Bu
 # Use the buffered geometry for spatial join
 ourairports_gdf_buffered = ourairports_gdf.set_geometry('geometry_buffer')
 
-# Prepare the overpass GeoDataFrame for spatial join
-overpass_gdf_sjoin = overpass_gdf[['geometry']].copy()
+# Prepare the combined GeoDataFrame for spatial join
+combined_gdf_sjoin = combined_gdf[['geometry']].copy()
 
 # Perform spatial join to find matching airports
 joined_gdf = gpd.sjoin(
     ourairports_gdf_buffered,
-    overpass_gdf_sjoin,
+    combined_gdf_sjoin,
     how='left',
-    predicate='intersects'  # Updated parameter name
+    predicate='intersects'
 )
 
-# Identify airports not in overpass (NaN in 'index_right' indicates no match)
+# Identify airports not in overpass or runway data (NaN in 'index_right' indicates no match)
 missing_airports_gdf = joined_gdf[joined_gdf['index_right'].isna()]
 
 # Step 5: Clean Up and Add OSM Editor Link
@@ -80,8 +96,6 @@ missing_airports_gdf['osm_editor_link'] = missing_airports_gdf.apply(
 columns_to_keep = ourairports_df.columns.tolist() + ['geometry', 'osm_editor_link']
 missing_airports_gdf = missing_airports_gdf[columns_to_keep]
 
-# Export to GeoPackage
-#missing_airports_gdf.to_file('missing_airports.gpkg', layer='missing_airports', driver='GPKG')
-missing_airports_gdf.to_csv('data/world/osm/overpass/missing_from_ourairports.csv')
-
+# Export to CSV
+missing_airports_gdf.to_csv('data/world/osm/overpass/missing_from_ourairports.csv', index=False)
 
