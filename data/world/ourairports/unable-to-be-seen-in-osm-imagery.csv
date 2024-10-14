@@ -39,3 +39,10 @@ id,ident,type,name,latitude_deg,longitude_deg,elevation_ft,continent,iso_country
 310036,PG-0059,small_airport,Baina Airstrip,-6.8918,143.6818,215.0,OC,PG,PG-GPK,Baina,no,AYBN,,BNA,,,,POINT (143.6818 -6.8918),https://www.openstreetmap.org/edit?editor=id#map=18/-6.891800/143.681800
 314252,PG-0083,small_airport,Matkomnae Airstrip,-5.817,141.1614,170.0,OC,PG,PG-WPD,Matkomrae,no,,,MMA,,,Matkomrae,POINT (141.1614 -5.817),https://www.openstreetmap.org/edit?editor=id#map=18/-5.817000/141.161400
 528240,MX-2241,small_airport,El Pescadero Airstrip,23.3879,-110.150481,344.0,,MX,MX-BCS,La Paz,no,,,EPS,,,,POINT (-110.150481 23.3879),https://www.openstreetmap.org/edit?editor=id#map=18/23.387900/-110.150481
+31630,HSTO,small_airport,Tong Airport,7.267000198364258,28.982999801635746,1413.0,AF,SS,SS-21,Tong,no,HSTO,,,,,,POINT (28.982999801635746 7.267000198364258),https://www.openstreetmap.org/edit?editor=id#map=18/7.267000/28.983000
+308300,SS-0002,small_airport,Duk Payuel Airstrip,7.47704,31.51449,1357.0,AF,SS,SS-20,Duk Payuel,no,HJDP,,,,,"Duk Faiwil, Ager",POINT (31.51449 7.47704),https://www.openstreetmap.org/edit?editor=id#map=18/7.477040/31.514490
+308310,SS-0012,small_airport,Buk Airfield,8.01095641186,31.428108215299996,,AF,SS,SS-20,,no,,,,,,,POINT (31.428108215299996 8.01095641186),https://www.openstreetmap.org/edit?editor=id#map=18/8.010956/31.428108
+344029,SS-0023,small_airport,Doregh Airstrip,9.04242,30.70938,1314.0,AF,SS,SS-20,Doregh,no,,,,,,,POINT (30.70938 9.04242),https://www.openstreetmap.org/edit?editor=id#map=18/9.042420/30.709380
+351459,SS-0048,small_airport,Nimni Airport,9.31332,30.01904,,AF,SS,SS-20,Nimni,no,,,,,,,POINT (30.01904 9.31332),https://www.openstreetmap.org/edit?editor=id#map=18/9.313320/30.019040
+351462,SS-0051,small_airport,Adok Airport,8.20699,30.29131,,AF,SS,SS-22,Adok,no,,,,,,,POINT (30.29131 8.20699),https://www.openstreetmap.org/edit?editor=id#map=18/8.206990/30.291310
+351465,SS-0052,small_airport,Pakuor Airport,7.12922,31.36519,,AF,SS,SS-20,Pakuor,no,,,,,,,POINT (31.36519 7.12922),https://www.openstreetmap.org/edit?editor=id#map=18/7.129220/31.365190
